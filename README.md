@@ -2,28 +2,26 @@
 
 A macOS app that opens and closes other apps at times you choose.
 
-It's a **setup tool, not a background app**. Open it when you want to change
-something, then quit. The schedules keep running because they're handed to
-macOS itself (launchd), not kept alive by Curfew. Nothing of ours runs when the
-window is closed.
+Curfew is a setup tool. Open it to change a schedule, then quit. macOS runs the
+schedules through launchd, so Curfew does not stay open in the background.
 
 ## What it does
 
-**Apps** -- add an app and set the times you want it opened and closed, and the
+**Apps:** Add an app and set the times you want it opened and closed, and the
 days that applies to. It can open only, close only, or both. Closing either
 asks the app to quit politely, like ⌘Q, or forces it if it refuses. Closing can
 also take the app out of the Dock, for something you'd rather not have on show.
 
-**Skip Days** -- dates when apps are left alone. They live in named calendars --
-a school one, a work one -- and each app picks which it follows, so one app can
+**Skip Days:** Dates when apps are left alone. They live in named calendars,
+such as school or work, and each app picks which it follows. One app can
 pause for school while another pauses for work. Import a `.ics`, or add dates
 by hand.
 
 ## Permissions
 
-Automation, optionally -- it's what lets Curfew quit an app politely instead of
-force-killing it. Without it nothing breaks; Curfew still shuts apps down
-cleanly, just not by the polite route. Apps set to "Force quit" never need it.
+Automation lets Curfew ask an app to quit normally instead of force-quitting
+it. Curfew still works without this permission, and apps set to Force Quit do
+not need it.
 
 ## Installing
 
@@ -47,7 +45,8 @@ app opens normally for good.
 
 ## Updates
 
-Curfew does not update itself. Watch this repo to hear when a new version lands.
+Curfew checks this repository for updates when it opens. It asks before
+downloading or installing anything.
 
 ## Source
 
