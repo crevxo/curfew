@@ -1,3 +1,5 @@
+<img src="icon.png" width="128" height="128" alt="Curfew icon">
+
 # Curfew
 
 A macOS app that opens and closes other apps at times you choose.
